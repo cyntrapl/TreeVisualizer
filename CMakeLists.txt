@@ -8,6 +8,10 @@ FetchContent_MakeAvailable(SFML)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(TreeVisualizerSFML main.cpp)
+add_executable(TreeVisualizerSFML main.cpp
+        TreeNode.h
+        TreeNode.cpp
+        InputBox.h
+        InputBox.cpp)
 
 target_link_libraries(TreeVisualizerSFML sfml-graphics)
