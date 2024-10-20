@@ -1,4 +1,4 @@
-{ pkgs ? import <nixpkgs> {} }:
+{ pkgs ? import <nixpkgs> { } }:
 
 pkgs.mkShell {
   buildInputs = [
@@ -8,9 +8,8 @@ pkgs.mkShell {
   ];
 
   shellHook = ''
-    mkdir -p build
+    cmake -B build -S .
     cd build
-    cmake ..
     make
   '';
 }
