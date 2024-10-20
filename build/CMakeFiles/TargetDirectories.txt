@@ -1,3 +1,0 @@
-/home/cyntrap/dev/Uni/GS/TreeVisualizer/build/CMakeFiles/TreeVisualizer.dir
-/home/cyntrap/dev/Uni/GS/TreeVisualizer/build/CMakeFiles/edit_cache.dir
-/home/cyntrap/dev/Uni/GS/TreeVisualizer/build/CMakeFiles/rebuild_cache.dir
