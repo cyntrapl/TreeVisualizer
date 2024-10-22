@@ -29,14 +29,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db0de057-745c-454f-8e03-ea275fd61d47" name="Changes" comment="init">
-      <change afterPath="$PROJECT_DIR$/InputBox.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/InputBox.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TreeNode.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TreeNode.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/default.nix" afterDir="false" />
+    <list default="true" id="db0de057-745c-454f-8e03-ea275fd61d47" name="Changes" comment="- actual project">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TreeNode.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TreeNode.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -108,12 +104,12 @@
   }
 }</component>
   <component name="RunManager" selected="CMake Application.TreeVisualizerSFML">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+    <configuration name="TreeVisualizerSFML" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" WORKING_DIR="file://$FileDir$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="TreeVisualizerSFML" TARGET_NAME="TreeVisualizerSFML" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="TreeVisualizerSFML" RUN_TARGET_NAME="TreeVisualizerSFML">
       <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TreeVisualizerSFML" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" WORKING_DIR="file://$FileDir$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="TreeVisualizerSFML" TARGET_NAME="TreeVisualizerSFML" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="TreeVisualizerSFML" RUN_TARGET_NAME="TreeVisualizerSFML">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -172,7 +168,8 @@
       <workItem from="1728549766050" duration="183000" />
       <workItem from="1728549963079" duration="540000" />
       <workItem from="1728819918826" duration="3415000" />
-      <workItem from="1729451295476" duration="3486000" />
+      <workItem from="1729451295476" duration="7981000" />
+      <workItem from="1729592865444" duration="1847000" />
     </task>
     <task id="LOCAL-00001" summary="gitignore">
       <option name="closed" value="true" />
@@ -206,7 +203,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728550490573</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="- actual project">
+      <option name="closed" value="true" />
+      <created>1729455502018</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1729455502018</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -220,7 +225,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="gitignore" />
     <MESSAGE value="init" />
-    <option name="LAST_COMMIT_MESSAGE" value="init" />
+    <MESSAGE value="- actual project" />
+    <option name="LAST_COMMIT_MESSAGE" value="- actual project" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

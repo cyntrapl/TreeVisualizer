@@ -106,10 +106,8 @@ PlaceholderNode* getPlaceholderAtPosition(const std::vector<PlaceholderNode>& pl
 void deleteNode(TreeNode*& root, TreeNode* nodeToDelete) {
     if (root == nullptr || nodeToDelete == nullptr) return;
 
-    // If the node to delete is the root
+    // If the node to delete is the root, do nothing
     if (root == nodeToDelete) {
-        deleteSubtree(root);
-        root = nullptr;
         return;
     }
 

@@ -18,7 +18,7 @@ int main() {
 
     // Initialize the tree with the input value
     int rootValue = initialInput.empty() ? 1 : std::stoi(initialInput);
-    TreeNode* root = new TreeNode(rootValue, 400, 50);
+    auto* root = new TreeNode(rootValue, 400, 50);
     root->left = new TreeNode(2, 300, 150);
     root->right = new TreeNode(3, 500, 150);
     root->left->left = new TreeNode(4, 250, 250);
@@ -34,6 +34,18 @@ int main() {
 
     // Track the largest value in the tree
     int largestValue = findLargestValue(root);
+
+    // Load font and create guide text
+    sf::Font font;
+    if (!font.loadFromFile("arial.ttf")) {
+        return -1; // Handle error
+    }
+    sf::Text guideText;
+    guideText.setFont(font);
+    guideText.setString("Right click - select\nLeft click - drag\nEnter - edit\nDelete - delete");
+    guideText.setCharacterSize(15);
+    guideText.setFillColor(sf::Color::White);
+    guideText.setPosition(10, 10);
 
     while (window.isOpen()) {
         sf::Event event;
@@ -71,7 +83,7 @@ int main() {
             }
             if (event.type == sf::Event::MouseButtonPressed) {
                 if (event.mouseButton.button == sf::Mouse::Left) {
-                    sf::Vector2f mousePos = window.mapPixelToCoords(sf::Mouse::getPosition(window));
+                    sf::Vector2f mousePos = window.mapPixelToCoords(sf::Mouse::getPosition(window), view);
                     draggedNode = getNodeAtPosition(root, mousePos);
                     if (draggedNode) {
                         dragOffset = draggedNode->position - mousePos;
@@ -91,7 +103,7 @@ int main() {
                         }
                     }
                 } else if (event.mouseButton.button == sf::Mouse::Right) {
-                    sf::Vector2f mousePos = window.mapPixelToCoords(sf::Mouse::getPosition(window));
+                    sf::Vector2f mousePos = window.mapPixelToCoords(sf::Mouse::getPosition(window), view);
                     selectedNode = getNodeAtPosition(root, mousePos);
                     if (selectedNode) {
                         placeholders.clear();
@@ -101,7 +113,7 @@ int main() {
                         if (!selectedNode->right) {
                             placeholders.emplace_back(selectedNode->position.x + 50, selectedNode->position.y + 100, false);
                         }
-                    }
+                    } else placeholders.clear();
                 }
             }
             if (event.type == sf::Event::MouseButtonReleased) {
@@ -111,16 +123,18 @@ int main() {
             }
             if (event.type == sf::Event::MouseMoved) {
                 if (draggedNode) {
-                    sf::Vector2f mousePos = window.mapPixelToCoords(sf::Mouse::getPosition(window));
+                    sf::Vector2f mousePos = window.mapPixelToCoords(sf::Mouse::getPosition(window), view);
                     draggedNode->position = mousePos + dragOffset;
                 }
             }
         }
 
-        window.setView(view);
         window.clear();
+        window.setView(view);
         drawTree(window, root, selectedNode);
         drawPlaceholders(window, placeholders);
+        window.setView(window.getDefaultView()); // Reset to default view
+        window.draw(guideText); // Draw guide text after resetting the view
         window.display();
     }
 
