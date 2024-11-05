@@ -12,8 +12,14 @@ include_directories(${SFML_INCLUDE_DIRS})
 # Source files
 set(SOURCES
     main.cpp
+    TreeNode.h
     TreeNode.cpp
+    InputBox.h
     InputBox.cpp
+    TreeBaseFunctions.cpp
+    TreeBaseFunctions.h
+    TreeManagementFunctions.cpp
+    TreeManagementFunctions.h
 )
 
 # Add executable
